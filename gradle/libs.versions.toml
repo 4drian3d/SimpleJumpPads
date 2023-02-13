@@ -1,0 +1,18 @@
+metadata.format.version = "1.1"
+
+[versions]
+
+configurate = "4.1.2"
+runpaper = "2.0.1"
+paper = "1.19.3-R0.1-SNAPSHOT"
+plugin-yml = "0.5.2"
+
+[libraries]
+
+configurate = { group = "org.spongepowered", name = "configurate-hocon", version.ref = "configurate" }
+paper = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper" }
+
+[plugins]
+
+runpaper = { id = "xyz.jpenilla.run-paper", version.ref = "runtask" }
+pluginyml-bukkit = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "plugin-yml" }
