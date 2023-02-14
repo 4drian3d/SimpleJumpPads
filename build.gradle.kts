@@ -39,5 +39,15 @@ bukkit {
         register("simplejumppads.jump") {
             default = BukkitPluginDescription.Permission.Default.TRUE
         }
+        register("simplejumppads.command") {
+            default = BukkitPluginDescription.Permission.Default.OP
+        }
+    }
+
+    commands {
+        register("jumppads") {
+            aliases = listOf("simplejumppads")
+            permission = "simplejumppads.command"
+        }
     }
 }
