@@ -18,7 +18,7 @@ public final class JumpPadInteractListener implements Listener {
         this.plugin = plugin;
     }
 
-    @EventHandler
+    @EventHandler(ignoreCancelled = true)
     public void onInteract(final PlayerInteractEvent event) {
         if (event.getAction() != Action.PHYSICAL) {
             return;
