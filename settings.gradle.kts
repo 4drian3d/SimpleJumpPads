@@ -1,1 +1,1 @@
-rootProject.name = "UnSignedVelocity"
+rootProject.name = "SimpleJumPads"

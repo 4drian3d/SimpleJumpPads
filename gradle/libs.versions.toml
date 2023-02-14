@@ -14,5 +14,5 @@ paper = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper" 
 
 [plugins]
 
-runpaper = { id = "xyz.jpenilla.run-paper", version.ref = "runtask" }
+runpaper = { id = "xyz.jpenilla.run-paper", version.ref = "runpaper" }
 pluginyml-bukkit = { id = "net.minecrell.plugin-yml.bukkit", version.ref = "plugin-yml" }
