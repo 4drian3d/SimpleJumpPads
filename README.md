@@ -1,4 +1,4 @@
-# SimpleJumPads
+# SimpleJumpPads
 
 Simple JumpPads plugin, optimized for the latest version of Paper, Pufferfish and Purpur.
 
