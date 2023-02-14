@@ -11,6 +11,7 @@ public final class Loader {
                 .defaultOptions(a ->
                     a.header("""
                             SimpleJumpPads | by 4drian3d
+                            
                             Available Materials for JumpPads:
                             - ACACIA_PRESSURE_PLATE
                             - BAMBOO_PRESSURE_PLATE

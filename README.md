@@ -1,4 +1,6 @@
 # SimpleJumpPads
+[![Version](https://img.shields.io/github/v/release/4drian3d/SimpleJumpPads?color=FFF0&style=flat-square)](https://modrinth.com/mod/simplejumppads)
+[![Discord](https://img.shields.io/discord/899740810956910683?color=7289da&label=Discord)](https://discord.gg/5NMMzK5mAn)
 
 Simple JumpPads plugin, optimized for the latest version of Paper, Pufferfish and Purpur
 
