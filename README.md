@@ -24,4 +24,4 @@ Reloads the plugin
 
 ## Downloads
 
-Download it from Modrinth
+Download it from [Modrinth](https://modrinth.com/plugin/simplejumppads)
