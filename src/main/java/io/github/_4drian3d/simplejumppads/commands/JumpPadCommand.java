@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class JumpPadCommand implements CommandExecutor, TabCompleter {
+public final class JumpPadCommand implements CommandExecutor, TabCompleter {
     private final SimpleJumpPads plugin;
 
     public JumpPadCommand(final SimpleJumpPads plugin) {

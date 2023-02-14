@@ -1,6 +1,6 @@
 # SimpleJumpPads
 
-Simple JumpPads plugin, optimized for the latest version of Paper, Pufferfish and Purpur.
+Simple JumpPads plugin, optimized for the latest version of Paper, Pufferfish and Purpur
 
 ## Requirements
 - Java 17
@@ -8,7 +8,7 @@ Simple JumpPads plugin, optimized for the latest version of Paper, Pufferfish an
 
 ## Features
 - Configure multiple types of materials for your JumpPads (compatible with all types of pressure plates)
-- Activate JumpPads for worlds (via [LuckPerms Contexts](https://luckperms.net/wiki/Context)).
+- Activate JumpPads for worlds, regions and more (via [LuckPerms Contexts](https://luckperms.net/wiki/Context)).
 Permission for JumpPads usage: `simplejumppads.jump`
 - Focused on performance. Use the latest Paper APIs to avoid overloading your server in any way
 
