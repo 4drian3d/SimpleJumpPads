@@ -1,4 +1,4 @@
-package io.github._4drian3d.simplejumpads.configuration;
+package io.github._4drian3d.simplejumppads.configuration;
 
 import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.hocon.HoconConfigurationLoader;
@@ -9,7 +9,7 @@ public final class Loader {
     public static Configuration loadConfiguration(final Path path) throws ConfigurateException {
         final HoconConfigurationLoader loader = HoconConfigurationLoader.builder()
                 .defaultOptions(a ->
-                    a.header("SimpleJumPads | by 4drian3d")
+                    a.header("SimpleJumpPads | by 4drian3d")
                             .shouldCopyDefaults(true)
                 )
                 .path(path.resolve("config.conf"))

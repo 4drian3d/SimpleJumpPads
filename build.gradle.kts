@@ -26,7 +26,7 @@ tasks {
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
 bukkit {
-    main = "io.github._4drian3d.simplejumpads.SimpleJumPads"
+    main = "io.github._4drian3d.simplejumppads.SimpleJumpPads"
     name = project.name
     version = project.version as String
     description = project.description as String

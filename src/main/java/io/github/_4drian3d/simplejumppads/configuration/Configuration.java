@@ -1,4 +1,4 @@
-package io.github._4drian3d.simplejumpads.configuration;
+package io.github._4drian3d.simplejumppads.configuration;
 
 import org.bukkit.Material;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;

@@ -1,6 +1,6 @@
-package io.github._4drian3d.simplejumpads.listener;
+package io.github._4drian3d.simplejumppads.listener;
 
-import io.github._4drian3d.simplejumpads.SimpleJumPads;
+import io.github._4drian3d.simplejumppads.SimpleJumpPads;
 import io.papermc.paper.math.BlockPosition;
 import io.papermc.paper.math.Position;
 import org.bukkit.Location;
@@ -12,10 +12,10 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 @SuppressWarnings("UnstableApiUsage")
-public final class JumPadInteractListener implements Listener {
-    private final SimpleJumPads plugin;
+public final class JumpPadInteractListener implements Listener {
+    private final SimpleJumpPads plugin;
 
-    public JumPadInteractListener(final SimpleJumPads plugin) {
+    public JumpPadInteractListener(final SimpleJumpPads plugin) {
         this.plugin = plugin;
     }
     @EventHandler
@@ -25,7 +25,7 @@ public final class JumPadInteractListener implements Listener {
         }
 
         final Player player = event.getPlayer();
-        if (player.hasPermission("simplejumpads.jump")) {
+        if (player.hasPermission("simplejumppads.jump")) {
             return;
         }
 

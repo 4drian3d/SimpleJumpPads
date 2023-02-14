@@ -1,14 +1,14 @@
-package io.github._4drian3d.simplejumpads;
+package io.github._4drian3d.simplejumppads;
 
-import io.github._4drian3d.simplejumpads.configuration.Configuration;
-import io.github._4drian3d.simplejumpads.configuration.Loader;
-import io.github._4drian3d.simplejumpads.listener.JumPadInteractListener;
+import io.github._4drian3d.simplejumppads.configuration.Configuration;
+import io.github._4drian3d.simplejumppads.configuration.Loader;
+import io.github._4drian3d.simplejumppads.listener.JumpPadInteractListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import static net.kyori.adventure.text.minimessage.MiniMessage.miniMessage;
 
 @SuppressWarnings("unused")
-public final class SimpleJumPads extends JavaPlugin {
+public final class SimpleJumpPads extends JavaPlugin {
 	private Configuration configuration;
 
     @Override
@@ -24,7 +24,7 @@ public final class SimpleJumPads extends JavaPlugin {
             return;
         }
 
-        pluginmanager.registerEvents(new JumPadInteractListener(this), this);
+        pluginmanager.registerEvents(new JumpPadInteractListener(this), this);
 
         logger.info(miniMessage().deserialize("<gradient:#233329:#63D471>Correctly Started"));
     }
