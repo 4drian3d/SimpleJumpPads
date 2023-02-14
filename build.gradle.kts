@@ -1,3 +1,5 @@
+import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
+
 plugins {
     java
     alias(libs.plugins.runpaper)
@@ -32,4 +34,10 @@ bukkit {
     description = project.description as String
     author = "4drian3d"
     apiVersion = "1.19"
+
+    permissions {
+        register("simplejumppads.jump") {
+            default = BukkitPluginDescription.Permission.Default.TRUE
+        }
+    }
 }

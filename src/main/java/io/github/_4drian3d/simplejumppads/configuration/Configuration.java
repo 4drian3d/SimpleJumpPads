@@ -17,18 +17,18 @@ public class Configuration {
     @ConfigSerializable
     public static class Section {
         private Material material = Material.HEAVY_WEIGHTED_PRESSURE_PLATE;
-        private int multiplyX = 2;
-        private int multiplyY = 2;
+        private double multiplyX = 1.0;
+        private double multiplyY = 1.0;
 
         public Material getMaterial() {
             return material;
         }
 
-        public int getMultiplyX() {
+        public double getMultiplyX() {
             return multiplyX;
         }
 
-        public int getMultiplyY() {
+        public double getMultiplyY() {
             return multiplyY;
         }
     }

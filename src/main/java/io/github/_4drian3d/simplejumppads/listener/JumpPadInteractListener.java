@@ -1,23 +1,23 @@
 package io.github._4drian3d.simplejumppads.listener;
 
 import io.github._4drian3d.simplejumppads.SimpleJumpPads;
-import io.papermc.paper.math.BlockPosition;
-import io.papermc.paper.math.Position;
 import org.bukkit.Location;
-import org.bukkit.block.Block;
+import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-@SuppressWarnings("UnstableApiUsage")
+import java.util.Objects;
+
 public final class JumpPadInteractListener implements Listener {
     private final SimpleJumpPads plugin;
 
     public JumpPadInteractListener(final SimpleJumpPads plugin) {
         this.plugin = plugin;
     }
+
     @EventHandler
     public void onInteract(final PlayerInteractEvent event) {
         if (event.getAction() != Action.PHYSICAL) {
@@ -29,21 +29,30 @@ public final class JumpPadInteractListener implements Listener {
             return;
         }
 
-        final Location location = player.getLocation();
-        final BlockPosition blockPosition = Position.block(location)
-                .offset(0, -1, 0);
-        final Location blockLocation = blockPosition.toLocation(location.getWorld());
-        final Block block = blockLocation.getBlock();
+        final Location location = copy(player.getLocation());
+        final Material type = Objects.requireNonNull(event.getClickedBlock()).getType();
 
         for (final var section : plugin.getConfiguration().getSections()) {
-            if (section.getMaterial() == block.getType()) {
+            if (section.getMaterial() == type) {
                 player.setVelocity(
-                        blockLocation.getDirection()
+                        location.getDirection()
                                 .multiply(section.getMultiplyX())
                                 .setY(section.getMultiplyY())
                 );
                 return;
             }
         }
+    }
+
+    @SuppressWarnings("UnstableApiUsage")
+    private Location copy(Location original) {
+        return new Location(
+                original.getWorld(),
+                original.blockX(),
+                original.blockY(),
+                original.blockZ(),
+                original.getYaw(),
+                original.getPitch()
+        );
     }
 }
