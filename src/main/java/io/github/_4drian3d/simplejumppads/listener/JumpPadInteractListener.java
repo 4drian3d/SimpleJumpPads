@@ -25,7 +25,7 @@ public final class JumpPadInteractListener implements Listener {
         }
 
         final Player player = event.getPlayer();
-        if (player.hasPermission("simplejumppads.jump")) {
+        if (!player.hasPermission("simplejumppads.jump")) {
             return;
         }
 
