@@ -4,15 +4,13 @@ import org.bukkit.Material;
 import org.spongepowered.configurate.objectmapping.ConfigSerializable;
 import org.spongepowered.configurate.objectmapping.meta.Comment;
 
-import java.util.List;
-
 @SuppressWarnings({"FieldMayBeFinal", "FieldCanBeLocal", "CanBeFinal"})
 @ConfigSerializable
 public class Configuration {
     @Comment("Configure which types of JumpPads you want to use")
-    private List<Section> sections = List.of(new Section());
+    private Section[] sections = { new Section() };
 
-    public List<Section> getSections() {
+    public Section[] getSections() {
         return sections;
     }
 

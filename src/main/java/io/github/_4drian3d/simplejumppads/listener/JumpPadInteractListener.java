@@ -45,7 +45,7 @@ public final class JumpPadInteractListener implements Listener {
     }
 
     @SuppressWarnings("UnstableApiUsage")
-    private Location copy(Location original) {
+    private Location copy(final Location original) {
         return new Location(
                 original.getWorld(),
                 original.blockX(),
