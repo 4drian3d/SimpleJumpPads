@@ -5,6 +5,7 @@ import io.papermc.paper.plugin.bootstrap.PluginProviderContext;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("UnstableApiUsage")
 public class JumpPadsBootstrap implements PluginBootstrap {
     @Override
     public void bootstrap(@NotNull PluginProviderContext context) {

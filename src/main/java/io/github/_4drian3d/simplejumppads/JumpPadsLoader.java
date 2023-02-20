@@ -8,15 +8,23 @@ import org.eclipse.aether.graph.Dependency;
 import org.eclipse.aether.repository.RemoteRepository;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("UnstableApiUsage")
 public class JumpPadsLoader implements PluginLoader {
     @Override
-    public void classloader(@NotNull PluginClasspathBuilder classpathBuilder) {
+    public void classloader(final @NotNull PluginClasspathBuilder classpathBuilder) {
         final MavenLibraryResolver resolver = new MavenLibraryResolver();
-        resolver.addDependency(new Dependency(
-                new DefaultArtifact("org.spongepowered:configurate-hocon:4.1.2"), null));
-        resolver.addRepository(new RemoteRepository.Builder(
-                "central", "default", "https://repo1.maven.org/maven2/"
-        ).build());
+
+        final RemoteRepository mavenCentral = new RemoteRepository
+                .Builder("central", "default", "https://repo1.maven.org/maven2/")
+                .build();
+        final Dependency configurateHocon = new Dependency(
+                new DefaultArtifact("org.spongepowered:configurate-hocon:4.1.2"),
+                null
+        );
+
+        resolver.addRepository(mavenCentral);
+        resolver.addDependency(configurateHocon);
+
         classpathBuilder.addLibrary(resolver);
     }
 }
