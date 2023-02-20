@@ -1,9 +1,6 @@
-import net.minecrell.pluginyml.bukkit.BukkitPluginDescription
-
 plugins {
     java
     alias(libs.plugins.runpaper)
-    alias(libs.plugins.pluginyml.bukkit)
 }
 
 repositories {
@@ -13,7 +10,7 @@ repositories {
 
 dependencies {
     compileOnly(libs.paper)
-    bukkitLibrary(libs.configurate)
+    compileOnly(libs.configurate)
 }
 
 tasks {
@@ -23,31 +20,11 @@ tasks {
     runServer {
         minecraftVersion("1.19.3")
     }
+    processResources {
+        filesMatching("paper-plugin.yml") {
+            expand("version" to project.version)
+        }
+    }
 }
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
-
-bukkit {
-    main = "io.github._4drian3d.simplejumppads.SimpleJumpPads"
-    name = project.name
-    version = project.version as String
-    description = project.description as String
-    author = "4drian3d"
-    apiVersion = "1.19"
-
-    permissions {
-        register("simplejumppads.jump") {
-            default = BukkitPluginDescription.Permission.Default.TRUE
-        }
-        register("simplejumppads.command") {
-            default = BukkitPluginDescription.Permission.Default.OP
-        }
-    }
-
-    commands {
-        register("jumppads") {
-            aliases = listOf("simplejumppads")
-            permission = "simplejumppads.command"
-        }
-    }
-}

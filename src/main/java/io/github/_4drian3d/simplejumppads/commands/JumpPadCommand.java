@@ -1,28 +1,44 @@
 package io.github._4drian3d.simplejumppads.commands;
 
 import io.github._4drian3d.simplejumppads.SimpleJumpPads;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.TabCompleter;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public final class JumpPadCommand implements CommandExecutor, TabCompleter {
+public final class JumpPadCommand extends Command {
     private final SimpleJumpPads plugin;
 
     public JumpPadCommand(final SimpleJumpPads plugin) {
+        super("simplejumppads", "", "", List.of("jumppads"));
+        setPermission("simplejumppads.command");
         this.plugin = plugin;
     }
 
+    private static final List<String> SUGGESTIONS = List.of("reload");
+
     @Override
-    public boolean onCommand(
+    public @NotNull List<String> tabComplete(
             final @NotNull CommandSender sender,
-            final @NotNull Command command,
             final @NotNull String label,
-            final @NotNull String @NotNull [] args
+            final @NotNull String @NotNull [] args,
+            final @Nullable Location location
+    ) {
+        if (args.length == 0 || "reload".startsWith(args[0])) {
+            return SUGGESTIONS;
+        }
+
+        return List.of();
+    }
+
+    @Override
+    public boolean execute(
+            @NotNull CommandSender sender,
+            @NotNull String commandLabel,
+            @NotNull String[] args
     ) {
         if (args.length == 0) {
             sender.sendRichMessage("<rainbow>SimpleJumpPads | by 4drian3d");
@@ -40,21 +56,5 @@ public final class JumpPadCommand implements CommandExecutor, TabCompleter {
         }
 
         return false;
-    }
-
-    private static final List<String> SUGGESTIONS = List.of("reload");
-
-    @Override
-    public @Nullable List<String> onTabComplete(
-            final @NotNull CommandSender sender,
-            final @NotNull Command command,
-            final @NotNull String label,
-            final @NotNull String @NotNull [] args
-    ) {
-        if (args.length == 0 || "reload".startsWith(args[0])) {
-            return SUGGESTIONS;
-        }
-
-        return null;
     }
 }
