@@ -1,5 +1,6 @@
 package io.github._4drian3d.simplejumppads.configuration;
 
+import net.kyori.adventure.serializer.configurate4.ConfigurateComponentSerializer;
 import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.hocon.HoconConfigurationLoader;
 
@@ -12,22 +13,12 @@ public final class Loader {
                     a.header("""
                             SimpleJumpPads | by 4drian3d
                             
-                            Available Materials for JumpPads:
-                            - ACACIA_PRESSURE_PLATE
-                            - BAMBOO_PRESSURE_PLATE
-                            - BIRCH_PRESSURE_PLATE
-                            - CRIMSON_PRESSURE_PLATE
-                            - DARK_OAK_PRESSURE_PLATE
-                            - HEAVY_WEIGHTED_PRESSURE_PLATE
-                            - JUNGLE_PRESSURE_PLATE
-                            - LIGHT_WEIGHTED_PRESSURE_PLATE
-                            - MANGROVE_PRESSURE_PLATE
-                            - OAK_PRESSURE_PLATE
-                            - POLISHED_BLACKSTONE_PRESSURE_PLATE
-                            - SPRUCE_PRESSURE_PLATE
-                            - STONE_PRESSURE_PLATE
-                            - WARPED_PRESSURE_PLATE""")
+                            Available Materials for JumpPads https://github.com/4drian3d/SimpleJumpPads/wiki/Materials
+                            Available Particles https://github.com/4drian3d/SimpleJumpPads/wiki/Particles""")
                             .shouldCopyDefaults(true)
+                            .serializers(
+                                    builder -> builder.registerAll(ConfigurateComponentSerializer.configurate()
+                                            .serializers()))
                 )
                 .path(path.resolve("config.conf"))
                 .build();

@@ -1,6 +1,7 @@
 package io.github._4drian3d.simplejumppads.listener;
 
 import io.github._4drian3d.simplejumppads.SimpleJumpPads;
+import net.kyori.adventure.sound.Sound;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -39,6 +40,12 @@ public final class JumpPadInteractListener implements Listener {
                                 .multiply(section.getMultiplyX())
                                 .setY(section.getMultiplyY())
                 );
+                if (section.isEnableParticle()) {
+                    location.getWorld().spawnParticle(section.getParticle(), location, 1);
+                }
+                if (section.isEnableSound()) {
+                    player.playSound(section.getSound(), Sound.Emitter.self());
+                }
                 return;
             }
         }

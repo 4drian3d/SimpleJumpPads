@@ -5,12 +5,12 @@ plugins {
 
 repositories {
     maven("https://repo.papermc.io/repository/maven-public/")
-    mavenCentral()
 }
 
 dependencies {
     compileOnly(libs.paper)
     compileOnly(libs.configurate)
+    compileOnly(libs.adventure.serializer)
 }
 
 tasks {

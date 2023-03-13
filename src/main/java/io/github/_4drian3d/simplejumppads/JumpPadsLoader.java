@@ -8,7 +8,7 @@ import org.eclipse.aether.graph.Dependency;
 import org.eclipse.aether.repository.RemoteRepository;
 import org.jetbrains.annotations.NotNull;
 
-@SuppressWarnings("UnstableApiUsage")
+@SuppressWarnings({"UnstableApiUsage", "unused"})
 public class JumpPadsLoader implements PluginLoader {
     @Override
     public void classloader(final @NotNull PluginClasspathBuilder classpathBuilder) {
@@ -21,9 +21,14 @@ public class JumpPadsLoader implements PluginLoader {
                 new DefaultArtifact("org.spongepowered:configurate-hocon:4.1.2"),
                 null
         );
+        final Dependency configurateAdventure = new Dependency(
+                new DefaultArtifact("net.kyori:adventure-serializer-configurate4:4.12.0"),
+                null
+        );
 
         resolver.addRepository(mavenCentral);
         resolver.addDependency(configurateHocon);
+        resolver.addDependency(configurateAdventure);
 
         classpathBuilder.addLibrary(resolver);
     }
