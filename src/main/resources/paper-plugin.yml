@@ -6,3 +6,4 @@ bootstrapper: io.github._4drian3d.simplejumppads.JumpPadsBootstrap
 loader: io.github._4drian3d.simplejumppads.JumpPadsLoader
 description: Simple JumPads for Paper
 api-version: '1.19'
+folia-supported: true

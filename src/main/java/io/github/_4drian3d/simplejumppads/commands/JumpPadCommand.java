@@ -4,12 +4,14 @@ import io.github._4drian3d.simplejumppads.SimpleJumpPads;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.PluginIdentifiableCommand;
+import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public final class JumpPadCommand extends Command {
+public final class JumpPadCommand extends Command implements PluginIdentifiableCommand {
     private final SimpleJumpPads plugin;
 
     public JumpPadCommand(final SimpleJumpPads plugin) {
@@ -56,5 +58,10 @@ public final class JumpPadCommand extends Command {
         }
 
         return false;
+    }
+
+    @Override
+    public @NotNull Plugin getPlugin() {
+        return this.plugin;
     }
 }
