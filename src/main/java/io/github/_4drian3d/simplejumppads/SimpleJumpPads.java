@@ -15,7 +15,7 @@ import static net.kyori.adventure.text.minimessage.MiniMessage.miniMessage;
 
 @SuppressWarnings("unused")
 public final class SimpleJumpPads extends JavaPlugin {
-	private Configuration configuration;
+    private Configuration configuration;
     private final Path pluginpath;
 
     SimpleJumpPads(Path pluginPath) {
