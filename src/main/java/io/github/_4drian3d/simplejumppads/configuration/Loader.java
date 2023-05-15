@@ -1,5 +1,7 @@
 package io.github._4drian3d.simplejumppads.configuration;
 
+import io.github._4drian3d.simplejumppads.configuration.serializer.MaterialSerializer;
+import io.github._4drian3d.simplejumppads.configuration.serializer.ParticleSerializer;
 import net.kyori.adventure.serializer.configurate4.ConfigurateComponentSerializer;
 import org.spongepowered.configurate.ConfigurateException;
 import org.spongepowered.configurate.hocon.HoconConfigurationLoader;
@@ -18,7 +20,10 @@ public final class Loader {
                             .shouldCopyDefaults(true)
                             .serializers(
                                     builder -> builder.registerAll(ConfigurateComponentSerializer.configurate()
-                                            .serializers()))
+                                            .serializers())
+                                            .register(new MaterialSerializer())
+                                            .register(new ParticleSerializer())
+                            )
                 )
                 .path(path.resolve("config.conf"))
                 .build();

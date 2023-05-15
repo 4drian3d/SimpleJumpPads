@@ -34,7 +34,7 @@ public final class JumpPadInteractListener implements Listener {
         final Material type = Objects.requireNonNull(event.getClickedBlock()).getType();
 
         for (final var section : plugin.getConfiguration().getSections()) {
-            if (section.getMaterial() == type) {
+            if (Objects.equals(section.getMaterial(), type)) {
                 player.setVelocity(
                         location.getDirection()
                                 .multiply(section.getMultiplyX())

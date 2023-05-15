@@ -41,7 +41,7 @@ public final class SimpleJumpPads extends JavaPlugin {
         }
 
         pluginmanager.registerEvents(new JumpPadInteractListener(this), this);
-        getServer().getCommandMap().register("simplejumppads",new JumpPadCommand(this));
+        getServer().getCommandMap().register("simplejumppads", new JumpPadCommand(this));
 
         logger.info(miniMessage().deserialize("<gradient:#233329:#63D471>Correctly Started"));
     }
