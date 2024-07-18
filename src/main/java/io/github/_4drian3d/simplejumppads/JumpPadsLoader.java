@@ -22,7 +22,7 @@ public class JumpPadsLoader implements PluginLoader {
                 null
         );
         final Dependency configurateAdventure = new Dependency(
-                new DefaultArtifact("net.kyori:adventure-serializer-configurate4:4.12.0"),
+                new DefaultArtifact("net.kyori:adventure-serializer-configurate4:4.17.0"),
                 null
         );
 
