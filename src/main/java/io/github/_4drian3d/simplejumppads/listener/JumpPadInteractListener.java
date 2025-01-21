@@ -40,7 +40,7 @@ public record JumpPadInteractListener(SimpleJumpPads plugin) implements EventExe
                                 .setY(section.getMultiplyY())
                 );
                 if (section.isEnableParticle()) {
-                    location.getWorld().spawnParticle(section.getParticle(), location, 1);
+                    location.getWorld().spawnParticle(section.getParticle(), location, Math.max(section.getParticleAmount(), 1));
                 }
                 if (section.isEnableSound()) {
                     player.playSound(section.getSound(), Sound.Emitter.self());
