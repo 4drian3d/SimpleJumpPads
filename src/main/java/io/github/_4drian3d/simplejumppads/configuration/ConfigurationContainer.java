@@ -44,7 +44,7 @@ public final class ConfigurationContainer {
                                             .register(new ParticleSerializer())
                             )
             )
-            .path(filePath.resolve("config.conf"))
+            .path(filePath)
             .build();
 
     final var node = loader.load();
