@@ -33,6 +33,8 @@ public class Configuration {
         private Sound sound = Sound.sound(Key.key("entity.experience_orb.pickup"), Sound.Source.PLAYER, 1, 1);
         @Comment("Sets which particle will be displayed when using this JumpPad if particles are enabled")
         private Particle particle = Particle.CLOUD;
+        @Comment("Sets the particle amount to spawn")
+        private int particleAmount = 10;
 
         public Material getMaterial() {
             return material;
@@ -56,6 +58,10 @@ public class Configuration {
 
         public Particle getParticle() {
             return particle;
+        }
+
+        public int getParticleAmount() {
+            return particleAmount;
         }
 
         public Sound getSound() {
