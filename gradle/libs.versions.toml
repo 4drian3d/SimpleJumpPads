@@ -5,13 +5,18 @@ metadata.format.version = "1.1"
 configurate = "4.1.2"
 runpaper = "2.3.1"
 paper = "1.21.4-R0.1-SNAPSHOT"
+shadow = "8.3.5"
+typesafe = "1.4.3"
 
 [libraries]
 
-configurate = { group = "org.spongepowered", name = "configurate-hocon", version.ref = "configurate" }
+configurate-core = { group = "org.spongepowered", name = "configurate-core", version.ref = "configurate" }
+configurate-hocon = { group = "org.spongepowered", name = "configurate-hocon", version.ref = "configurate" }
+hocon = { group = "com.typesafe", name = "config", version.ref = "typesafe" }
 paper = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper" }
 adventure-serializer = { group = "net.kyori", name = "adventure-serializer-configurate4", version = "4.19.0"}
 
 [plugins]
 
 runpaper = { id = "xyz.jpenilla.run-paper", version.ref = "runpaper" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
