@@ -14,7 +14,7 @@ configurate-core = { group = "org.spongepowered", name = "configurate-core", ver
 configurate-hocon = { group = "org.spongepowered", name = "configurate-hocon", version.ref = "configurate" }
 hocon = { group = "com.typesafe", name = "config", version.ref = "typesafe" }
 paper = { group = "io.papermc.paper", name = "paper-api", version.ref = "paper" }
-adventure-serializer = { group = "net.kyori", name = "adventure-serializer-configurate4", version = "4.19.0"}
+adventure-serializer = { group = "net.kyori", name = "adventure-serializer-configurate4", version = "4.24.0"}
 
 [plugins]
 
