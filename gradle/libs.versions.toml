@@ -5,7 +5,7 @@ metadata.format.version = "1.1"
 configurate = "4.2.0"
 runpaper = "3.0.2"
 paper = "1.21.4-R0.1-SNAPSHOT"
-shadow = "9.3.0"
+shadow = "9.3.1"
 typesafe = "1.4.5"
 
 [libraries]
