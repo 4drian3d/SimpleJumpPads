@@ -6,7 +6,7 @@ configurate = "4.2.0"
 runpaper = "3.0.2"
 paper = "1.21.4-R0.1-SNAPSHOT"
 shadow = "9.4.1"
-typesafe = "1.4.6"
+typesafe = "1.4.7"
 
 [libraries]
 
