@@ -4,7 +4,7 @@ metadata.format.version = "1.1"
 
 configurate = "4.2.0"
 runpaper = "3.0.2"
-paper = "1.21.4-R0.1-SNAPSHOT"
+paper = "26.1.2.build.64-stable"
 shadow = "9.4.1"
 typesafe = "1.4.6"
 
