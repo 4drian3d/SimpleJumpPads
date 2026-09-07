@@ -35,10 +35,10 @@ tasks {
         minimize()
     }
     compileJava {
-        options.release.set(21)
+        options.release.set(25)
     }
     runServer {
-        minecraftVersion("1.21.8")
+        minecraftVersion("26.2")
     }
     processResources {
         filesMatching("paper-plugin.yml") {
@@ -47,4 +47,4 @@ tasks {
     }
 }
 
-java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(25))
