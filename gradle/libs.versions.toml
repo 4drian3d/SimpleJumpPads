@@ -6,7 +6,7 @@ configurate = "4.2.0"
 runpaper = "3.1.0"
 paper = "26.3.build.209-stable"
 shadow = "9.6.1"
-typesafe = "1.4.9"
+typesafe = "1.4.10"
 
 [libraries]
 
